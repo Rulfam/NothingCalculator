@@ -16,26 +16,26 @@ config/name_localized={
 "ru": "Калькулятор ничего",
 "uk": "Калькулятор нічого"
 }
+config/description="0"
+config/version="1.0.1"
 run/main_scene="uid://blohkbwwwpgap"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 run/low_processor_mode=true
 config/icon="res://icon.svg"
+config/windows_native_icon="res://icon.ico"
 
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=480
-window/size/resizable=false
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation=1
 window/ios/allow_high_refresh_rate=false
 
 [dotnet]
 
 project/assembly_name="NothingCalculator"
-
-[editor]
-
-version_control/plugin_name="GitPlugin"
-version_control/autoload_on_startup=true
 
 [internationalization]
 
@@ -45,3 +45,4 @@ locale/translations=PackedStringArray("res://localization/translations.en.transl
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
