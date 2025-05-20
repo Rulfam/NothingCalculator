@@ -1,0 +1,215 @@
+[gd_scene load_steps=4 format=3 uid="uid://blohkbwwwpgap"]
+
+[ext_resource type="Script" uid="uid://dgoiip3yar1km" path="res://scripts/main.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://ccge0wt4plkgc" path="res://scripts/input_handler.gd" id="2_0wfyh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ig7tw"]
+content_margin_left = 32.0
+content_margin_top = 32.0
+content_margin_right = 32.0
+content_margin_bottom = 32.0
+bg_color = Color(0.180392, 0.180392, 0.180392, 1)
+anti_aliasing = false
+
+[node name="Main" type="PanelContainer" node_paths=PackedStringArray("input_handler")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ig7tw")
+script = ExtResource("1_ig7tw")
+input_handler = NodePath("InputHandler")
+
+[node name="InputHandler" type="Node" parent="." node_paths=PackedStringArray("players_input", "weeks_goal", "days_goal", "hours_goal", "minutes_goal", "weeks_spent", "days_spent", "hours_spent", "minutes_spent")]
+script = ExtResource("2_0wfyh")
+players_input = NodePath("../VBox/Inputs/Players/Field")
+weeks_goal = NodePath("../VBox/Inputs/TimeGoal/Fields/Weeks")
+days_goal = NodePath("../VBox/Inputs/TimeGoal/Fields/Days")
+hours_goal = NodePath("../VBox/Inputs/TimeGoal/Fields/Hours")
+minutes_goal = NodePath("../VBox/Inputs/TimeGoal/Fields/Minutes")
+weeks_spent = NodePath("../VBox/Inputs/TimeSpent/Fields/Weeks")
+days_spent = NodePath("../VBox/Inputs/TimeSpent/Fields/Days")
+hours_spent = NodePath("../VBox/Inputs/TimeSpent/Fields/Hours")
+minutes_spent = NodePath("../VBox/Inputs/TimeSpent/Fields/Minutes")
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 2
+alignment = 1
+
+[node name="Inputs" type="VBoxContainer" parent="VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Players" type="VBoxContainer" parent="VBox/Inputs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBox/Inputs/Players"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+text = "TXT.PLAYERS"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Field" type="LineEdit" parent="VBox/Inputs/Players"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+placeholder_text = "PLH.PLAYERS"
+alignment = 1
+virtual_keyboard_type = 2
+
+[node name="TimeGoal" type="VBoxContainer" parent="VBox/Inputs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBox/Inputs/TimeGoal"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+text = "TXT.TIME_GOAL"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Fields" type="HBoxContainer" parent="VBox/Inputs/TimeGoal"]
+layout_mode = 2
+
+[node name="Weeks" type="LineEdit" parent="VBox/Inputs/TimeGoal/Fields"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "PLH.WEEKS"
+alignment = 1
+virtual_keyboard_type = 2
+
+[node name="Days" type="LineEdit" parent="VBox/Inputs/TimeGoal/Fields"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "PLH.DAYS"
+alignment = 1
+virtual_keyboard_type = 2
+
+[node name="Hours" type="LineEdit" parent="VBox/Inputs/TimeGoal/Fields"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "PLH.HOURS"
+alignment = 1
+virtual_keyboard_type = 2
+
+[node name="Minutes" type="LineEdit" parent="VBox/Inputs/TimeGoal/Fields"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "PLH.MINUTES"
+alignment = 1
+virtual_keyboard_type = 2
+
+[node name="TimeSpent" type="VBoxContainer" parent="VBox/Inputs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBox/Inputs/TimeSpent"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+text = "TXT.TIME_SPENT"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Fields" type="HBoxContainer" parent="VBox/Inputs/TimeSpent"]
+layout_mode = 2
+
+[node name="Weeks" type="LineEdit" parent="VBox/Inputs/TimeSpent/Fields"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "PLH.WEEKS"
+alignment = 1
+virtual_keyboard_type = 2
+
+[node name="Days" type="LineEdit" parent="VBox/Inputs/TimeSpent/Fields"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "PLH.DAYS"
+alignment = 1
+virtual_keyboard_type = 2
+
+[node name="Hours" type="LineEdit" parent="VBox/Inputs/TimeSpent/Fields"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "PLH.HOURS"
+alignment = 1
+virtual_keyboard_type = 2
+
+[node name="Minutes" type="LineEdit" parent="VBox/Inputs/TimeSpent/Fields"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "PLH.MINUTES"
+alignment = 1
+virtual_keyboard_type = 2
+
+[node name="Displays" type="VBoxContainer" parent="VBox"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="Rate" type="HBoxContainer" parent="VBox/Displays"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBox/Displays/Rate"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "TXT.RATE"
+vertical_alignment = 1
+
+[node name="Number" type="Label" parent="VBox/Displays/Rate"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "FMT.INVALID"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimeLeft" type="HBoxContainer" parent="VBox/Displays"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+size_flags_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBox/Displays/TimeLeft"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "TXT.TIME"
+vertical_alignment = 1
+
+[node name="Number" type="Label" parent="VBox/Displays/TimeLeft"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "FMT.INVALID"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="VBoxContainer" parent="VBox"]
+layout_mode = 2
+
+[node name="Calculate" type="Button" parent="VBox/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "BTN.CALCULATE"
+
+[node name="HBox" type="HBoxContainer" parent="VBox/Buttons"]
+layout_mode = 2
+
+[node name="Clear" type="Button" parent="VBox/Buttons/HBox"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "BTN.CLEAR"
+
+[node name="Restore" type="Button" parent="VBox/Buttons/HBox"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "BTN.RESTORE"
+
+[node name="Quit" type="Button" parent="VBox/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "BTN.QUIT"
+
+[connection signal="pressed" from="VBox/Buttons/Calculate" to="." method="_on_calculate_button_pressed"]
+[connection signal="pressed" from="VBox/Buttons/HBox/Clear" to="." method="_on_clear_button_pressed"]
+[connection signal="pressed" from="VBox/Buttons/HBox/Restore" to="." method="_on_restore_button_pressed"]
+[connection signal="pressed" from="VBox/Buttons/Quit" to="." method="_on_quit_button_pressed"]

@@ -1,20 +1,22 @@
 KEY,en,es,ru,uk
 ,,,,
-^BTN.CALCULATE,Calculate,Calcular,Вычислить,Обчислити
-^BTN.EXIT,Do something,Hacer algo,Делать что-то,Робити щось
-^BTN.CLEAR,Clear,Borrar,Очистить,Очистити
-^BTN.RESTORE,Restore,Restaurar,Восстановить,Відновити
+BTN.CALCULATE,Calculate,Calcular,Вычислить,Обчислити
+BTN.QUIT,Do something,Hacer algo,Делать что-то,Робити щось
+BTN.CLEAR,Clear,Borrar,Очистить,Очистити
+BTN.RESTORE,Restore,Restaurar,Восстановить,Відновити
 ,,,,
-^PLHD.PLAYERS,Players,Jugadores,Игроки,Гравці
-^PLHD.DAYS,Days,Días,Дни,Дні
-^PLHD.HOURS,Hours,Horas,Часы,Години
-^PLHD.MINUTES,Minutes,Minutos,Минуты,Хвилини
+PLH.PLAYERS,Players,Jugadores,Игроки,Гравці
+PLH.WEEKS,Weeks,Semanas,Недели,Тижні
+PLH.DAYS,Days,Días,Дни,Дні
+PLH.HOURS,Hours,Horas,Часы,Години
+PLH.MINUTES,Minutes,Minutos,Минуты,Хвилини
 ,,,,
-^FORMAT.RATE,{0} min/shared hour,{0} min/hora compartida,{0} мин/общ. час,{0} хв/заг. год
-^FORMAT.TIME,"{d} d, {h} h, {m} m","{d} d, {h} h, {m} m","{d} дн, {h} ч, {m} мин","{d} дн, {h} год, {m} хв"
-^FORMAT.INVALID,—,—,—,—
+FMT.RATE,{0} min/shared hour,{0} min/hora compartida,{0} мин/общ. час,{0} хв/заг. год
+FMT.TIME,"{w}w, {d}d, {h}h, {m}min","{w}sem, {d}d, {h}h, {m}min","{w} нед, {d} дн, {h} ч, {m} мин","{w} тиж, {d} дн, {h} год, {m} хв"
+FMT.INVALID,—,—,—,—
 ,,,,
-^TEXT.PLAYERS,Number of players in the lobby,Número de jugadores en el vestíbulo,Количество игроков в лобби,Кількість гравців у лобі
-^TEXT.TOTAL_TIME,Total spent time,Tiempo total empleado,Общее проведённое время,Загальний витрачений час
-^TEXT.RATE,Waiting rate,Tasa de espera,Темп ожидания,Темп очікування
-^TEXT.TIME,Remaining time,Tiempo restante,Оставшееся время,Залишок часу
+TXT.PLAYERS,Number of players in the lobby,Número de jugadores en el vestíbulo,Количество игроков в лобби,Кількість гравців у лобі
+TXT.TIME_SPENT,Total spent time,Tiempo total empleado,Общее проведённое время,Загальний витрачений час
+TXT.TIME_GOAL,Time goal,Objectivo de tiempo,Временная цель,Часова мета
+TXT.RATE,Waiting rate,Tasa de espera,Темп ожидания,Темп очікування
+TXT.TIME,Remaining time,Tiempo restante,Оставшееся время,Залишок часу

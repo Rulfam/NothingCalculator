@@ -20,8 +20,8 @@ config/version="1.0.1"
 run/main_scene="uid://blohkbwwwpgap"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 run/low_processor_mode=true
-config/icon="res://icon.svg"
-config/windows_native_icon="res://icon.ico"
+config/icon="res://assets/icon.svg"
+config/windows_native_icon="res://assets/icon.ico"
 
 [display]
 
