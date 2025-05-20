@@ -16,7 +16,7 @@ config/name_localized={
 "ru": "Калькулятор ничего",
 "uk": "Калькулятор нічого"
 }
-config/version="1.0.1"
+config/version="1.1.0"
 run/main_scene="uid://blohkbwwwpgap"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 run/low_processor_mode=true
